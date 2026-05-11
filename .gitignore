@@ -1,0 +1,16 @@
+# Virtual environment
+venv/
+
+# Cloned ontology repos (users should clone themselves)
+cmso/
+asmo/
+pldo/
+podo/
+ldo/
+
+# atomRDF structure store
+rdf_structure_store/
+
+# Python
+__pycache__/
+*.pyc

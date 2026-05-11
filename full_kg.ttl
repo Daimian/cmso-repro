@@ -1,0 +1,290 @@
+@prefix cmso: <http://purls.helmholtz-metadaten.de/cmso/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix ns1: <http://purls.helmholtz-metadaten.de/cdos/podo/> .
+@prefix ns2: <http://purls.helmholtz-metadaten.de/asmo/> .
+@prefix ns3: <http://purls.helmholtz-metadaten.de/cdos/cdco/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<sample:6623cdfa-6123-482f-8528-7d5decdd4679> a cmso:AtomicScaleSample ;
+    ns2:hasCalculatedProperty <property:calculatedproperty_1730af97-0083-4eca-807a-86a3565830f2> ;
+    ns1:hasImpurityConcentration "0.037037037037037035"^^xsd:float ;
+    ns1:hasNumberOfImpurityAtoms 2 ;
+    cmso:hasAttribute <sample:6623cdfa-6123-482f-8528-7d5decdd4679_Position>,
+        <sample:6623cdfa-6123-482f-8528-7d5decdd4679_Species> ;
+    cmso:hasMaterial <sample:6623cdfa-6123-482f-8528-7d5decdd4679_Material> ;
+    cmso:hasNumberOfAtoms 54 ;
+    cmso:hasSimulationCell <sample:6623cdfa-6123-482f-8528-7d5decdd4679_SimulationCell> ;
+    cmso:hasSpecies <sample:6623cdfa-6123-482f-8528-7d5decdd4679_ChemicalSpecies> ;
+    dcat:checksum "faab01a32ef4b40c71d7ffc7dd4b2035"^^xsd:string ;
+    prov:wasDerivedFrom <sample:9eb0e3d2-9b50-4ee3-970b-6ec2018e8a1c> ;
+    prov:wasGeneratedBy <substituteatom:8285dc30-cf10-4e02-a01c-253a797fd2a3> .
+
+<sample:9eb0e3d2-9b50-4ee3-970b-6ec2018e8a1c_LatticeParameter> a cmso:LatticeParameter .
+
+<sample:e6764484-9b08-4c41-91ed-34395206ea57> a cmso:AtomicScaleSample ;
+    ns2:hasCalculatedProperty <property:calculatedproperty_818cbc19-f819-413b-9a4a-517d40d8d5b9> ;
+    ns1:hasNumberOfVacancies 1 ;
+    ns1:hasVacancyConcentration "0.018867924528301886"^^xsd:float ;
+    cmso:hasAttribute <sample:e6764484-9b08-4c41-91ed-34395206ea57_Position>,
+        <sample:e6764484-9b08-4c41-91ed-34395206ea57_Species> ;
+    cmso:hasMaterial <sample:e6764484-9b08-4c41-91ed-34395206ea57_Material> ;
+    cmso:hasNumberOfAtoms 53 ;
+    cmso:hasSimulationCell <sample:e6764484-9b08-4c41-91ed-34395206ea57_SimulationCell> ;
+    cmso:hasSpecies <sample:e6764484-9b08-4c41-91ed-34395206ea57_ChemicalSpecies> ;
+    dcat:checksum "2e28e434fd46f2ee814393097a93cf14"^^xsd:string .
+
+<sample:e6764484-9b08-4c41-91ed-34395206ea57_LatticeParameter> a cmso:LatticeParameter .
+
+<https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:28073> a cmso:ChemicalElement ;
+    cmso:hasChemicalSymbol "Cr"^^xsd:string ;
+    cmso:hasElementRatio "0.037037037037037035"^^xsd:float .
+
+<property:calculatedproperty_1730af97-0083-4eca-807a-86a3565830f2> a ns2:CalculatedProperty .
+
+<property:calculatedproperty_35476dba-9655-42b0-89df-6427805ecb0b> a ns2:CalculatedProperty .
+
+<property:calculatedproperty_818cbc19-f819-413b-9a4a-517d40d8d5b9> a ns2:CalculatedProperty .
+
+<sample:6623cdfa-6123-482f-8528-7d5decdd4679_ChemicalSpecies> a cmso:ChemicalSpecies ;
+    cmso:hasElement <https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:18248>,
+        <https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:28073> .
+
+<sample:6623cdfa-6123-482f-8528-7d5decdd4679_CrystalStructure> a cmso:CrystalStructure ;
+    cmso:hasUnitCell <sample:6623cdfa-6123-482f-8528-7d5decdd4679_UnitCell> .
+
+<sample:6623cdfa-6123-482f-8528-7d5decdd4679_LatticeAngle> a cmso:LatticeAngle ;
+    cmso:hasAngle_alpha "90.0"^^xsd:float ;
+    cmso:hasAngle_beta "90.0"^^xsd:float ;
+    cmso:hasAngle_gamma "90.0"^^xsd:float .
+
+<sample:6623cdfa-6123-482f-8528-7d5decdd4679_Material> a cmso:CrystallineMaterial ;
+    ns3:hasCrystallographicDefect <sample:6623cdfa-6123-482f-8528-7d5decdd4679_SubstitutionalImpurity> ;
+    cmso:hasStructure <sample:6623cdfa-6123-482f-8528-7d5decdd4679_CrystalStructure> .
+
+<sample:6623cdfa-6123-482f-8528-7d5decdd4679_Position> a cmso:AtomAttribute ;
+    cmso:hasIdentifier "cf0cd8de-f244-4ac0-bacf-1a5149d56aac"^^xsd:string ;
+    cmso:hasName "Position"^^xsd:string ;
+    cmso:hasPath "rdf_structure_store/6623cdfa-6123-482f-8528-7d5decdd4679.json"^^xsd:string .
+
+<sample:6623cdfa-6123-482f-8528-7d5decdd4679_SimulationCell> a cmso:SimulationCell ;
+    cmso:hasAngle <sample:6623cdfa-6123-482f-8528-7d5decdd4679_SimulationCellAngle> ;
+    cmso:hasLength <sample:6623cdfa-6123-482f-8528-7d5decdd4679_SimulationCellLength> ;
+    cmso:hasVector <sample:6623cdfa-6123-482f-8528-7d5decdd4679_SimulationCellVector_1>,
+        <sample:6623cdfa-6123-482f-8528-7d5decdd4679_SimulationCellVector_2>,
+        <sample:6623cdfa-6123-482f-8528-7d5decdd4679_SimulationCellVector_3> ;
+    cmso:hasVolume <sample:6623cdfa-6123-482f-8528-7d5decdd4679_Volume> .
+
+<sample:6623cdfa-6123-482f-8528-7d5decdd4679_SimulationCellAngle> a cmso:SimulationCellAngle ;
+    cmso:hasAngle_alpha "90.0"^^xsd:float ;
+    cmso:hasAngle_beta "90.0"^^xsd:float ;
+    cmso:hasAngle_gamma "90.0"^^xsd:float .
+
+<sample:6623cdfa-6123-482f-8528-7d5decdd4679_SimulationCellLength> a cmso:SimulationCellLength ;
+    cmso:hasLength_x "8.61"^^xsd:float ;
+    cmso:hasLength_y "8.61"^^xsd:float ;
+    cmso:hasLength_z "8.61"^^xsd:float .
+
+<sample:6623cdfa-6123-482f-8528-7d5decdd4679_SimulationCellVector_1> a cmso:SimulationCellVector ;
+    cmso:hasComponent_x "8.61"^^xsd:float ;
+    cmso:hasComponent_y "0.0"^^xsd:float ;
+    cmso:hasComponent_z "0.0"^^xsd:float .
+
+<sample:6623cdfa-6123-482f-8528-7d5decdd4679_SimulationCellVector_2> a cmso:SimulationCellVector ;
+    cmso:hasComponent_x "0.0"^^xsd:float ;
+    cmso:hasComponent_y "8.61"^^xsd:float ;
+    cmso:hasComponent_z "0.0"^^xsd:float .
+
+<sample:6623cdfa-6123-482f-8528-7d5decdd4679_SimulationCellVector_3> a cmso:SimulationCellVector ;
+    cmso:hasComponent_x "0.0"^^xsd:float ;
+    cmso:hasComponent_y "0.0"^^xsd:float ;
+    cmso:hasComponent_z "8.61"^^xsd:float .
+
+<sample:6623cdfa-6123-482f-8528-7d5decdd4679_Species> a cmso:AtomAttribute ;
+    cmso:hasIdentifier "3bf39aea-8d83-4f45-a09e-f506cdfc17a8"^^xsd:string ;
+    cmso:hasName "Species"^^xsd:string ;
+    cmso:hasPath "rdf_structure_store/6623cdfa-6123-482f-8528-7d5decdd4679.json"^^xsd:string .
+
+<sample:6623cdfa-6123-482f-8528-7d5decdd4679_SubstitutionalImpurity> a ns1:SubstitutionalImpurity .
+
+<sample:6623cdfa-6123-482f-8528-7d5decdd4679_UnitCell> a cmso:UnitCell ;
+    cmso:hasAngle <sample:6623cdfa-6123-482f-8528-7d5decdd4679_LatticeAngle> .
+
+<sample:6623cdfa-6123-482f-8528-7d5decdd4679_Volume> a ns2:Volume ;
+    rdfs:label "SimulationCellVolume" ;
+    ns2:hasUnit <http://qudt.org/vocab/unit/ANGSTROM3> ;
+    ns2:hasValue "638.28"^^xsd:float .
+
+<sample:9eb0e3d2-9b50-4ee3-970b-6ec2018e8a1c> a cmso:AtomicScaleSample ;
+    ns2:hasCalculatedProperty <property:calculatedproperty_35476dba-9655-42b0-89df-6427805ecb0b> ;
+    cmso:hasAttribute <sample:9eb0e3d2-9b50-4ee3-970b-6ec2018e8a1c_Position>,
+        <sample:9eb0e3d2-9b50-4ee3-970b-6ec2018e8a1c_Species> ;
+    cmso:hasMaterial <sample:9eb0e3d2-9b50-4ee3-970b-6ec2018e8a1c_Material> ;
+    cmso:hasNumberOfAtoms 54 ;
+    cmso:hasSimulationCell <sample:9eb0e3d2-9b50-4ee3-970b-6ec2018e8a1c_SimulationCell> ;
+    cmso:hasSpecies <sample:9eb0e3d2-9b50-4ee3-970b-6ec2018e8a1c_ChemicalSpecies> ;
+    dcat:checksum "51d3cf05c4fb3b4df3b915ef85c078ce"^^xsd:string .
+
+<sample:9eb0e3d2-9b50-4ee3-970b-6ec2018e8a1c_BravaisLattice> a <https://www.wikidata.org/wiki/Q851536> .
+
+<sample:9eb0e3d2-9b50-4ee3-970b-6ec2018e8a1c_ChemicalSpecies> a cmso:ChemicalSpecies ;
+    cmso:hasElement <https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:18248> .
+
+<sample:9eb0e3d2-9b50-4ee3-970b-6ec2018e8a1c_CrystalStructure> a cmso:CrystalStructure ;
+    cmso:hasSpaceGroupNumber 229 ;
+    cmso:hasSpaceGroupSymbol "Im-3m"^^xsd:string ;
+    cmso:hasUnitCell <sample:9eb0e3d2-9b50-4ee3-970b-6ec2018e8a1c_UnitCell> .
+
+<sample:9eb0e3d2-9b50-4ee3-970b-6ec2018e8a1c_LatticeAngle> a cmso:LatticeAngle ;
+    cmso:hasAngle_alpha "90.0"^^xsd:float ;
+    cmso:hasAngle_beta "90.0"^^xsd:float ;
+    cmso:hasAngle_gamma "90.0"^^xsd:float .
+
+<sample:9eb0e3d2-9b50-4ee3-970b-6ec2018e8a1c_Material> a cmso:CrystallineMaterial ;
+    cmso:hasStructure <sample:9eb0e3d2-9b50-4ee3-970b-6ec2018e8a1c_CrystalStructure> .
+
+<sample:9eb0e3d2-9b50-4ee3-970b-6ec2018e8a1c_Position> a cmso:AtomAttribute ;
+    cmso:hasIdentifier "39da1546-568e-4d59-8dfc-e45701c8ac66"^^xsd:string ;
+    cmso:hasName "Position"^^xsd:string ;
+    cmso:hasPath "rdf_structure_store/9eb0e3d2-9b50-4ee3-970b-6ec2018e8a1c.json"^^xsd:string .
+
+<sample:9eb0e3d2-9b50-4ee3-970b-6ec2018e8a1c_SimulationCell> a cmso:SimulationCell ;
+    cmso:hasAngle <sample:9eb0e3d2-9b50-4ee3-970b-6ec2018e8a1c_SimulationCellAngle> ;
+    cmso:hasLength <sample:9eb0e3d2-9b50-4ee3-970b-6ec2018e8a1c_SimulationCellLength> ;
+    cmso:hasRepetition_x 3 ;
+    cmso:hasRepetition_y 3 ;
+    cmso:hasRepetition_z 3 ;
+    cmso:hasVector <sample:9eb0e3d2-9b50-4ee3-970b-6ec2018e8a1c_SimulationCellVector_1>,
+        <sample:9eb0e3d2-9b50-4ee3-970b-6ec2018e8a1c_SimulationCellVector_2>,
+        <sample:9eb0e3d2-9b50-4ee3-970b-6ec2018e8a1c_SimulationCellVector_3> ;
+    cmso:hasVolume <sample:9eb0e3d2-9b50-4ee3-970b-6ec2018e8a1c_Volume> .
+
+<sample:9eb0e3d2-9b50-4ee3-970b-6ec2018e8a1c_SimulationCellAngle> a cmso:SimulationCellAngle ;
+    cmso:hasAngle_alpha "90.0"^^xsd:float ;
+    cmso:hasAngle_beta "90.0"^^xsd:float ;
+    cmso:hasAngle_gamma "90.0"^^xsd:float .
+
+<sample:9eb0e3d2-9b50-4ee3-970b-6ec2018e8a1c_SimulationCellLength> a cmso:SimulationCellLength ;
+    cmso:hasLength_x "8.61"^^xsd:float ;
+    cmso:hasLength_y "8.61"^^xsd:float ;
+    cmso:hasLength_z "8.61"^^xsd:float .
+
+<sample:9eb0e3d2-9b50-4ee3-970b-6ec2018e8a1c_SimulationCellVector_1> a cmso:SimulationCellVector ;
+    cmso:hasComponent_x "8.61"^^xsd:float ;
+    cmso:hasComponent_y "0.0"^^xsd:float ;
+    cmso:hasComponent_z "0.0"^^xsd:float .
+
+<sample:9eb0e3d2-9b50-4ee3-970b-6ec2018e8a1c_SimulationCellVector_2> a cmso:SimulationCellVector ;
+    cmso:hasComponent_x "0.0"^^xsd:float ;
+    cmso:hasComponent_y "8.61"^^xsd:float ;
+    cmso:hasComponent_z "0.0"^^xsd:float .
+
+<sample:9eb0e3d2-9b50-4ee3-970b-6ec2018e8a1c_SimulationCellVector_3> a cmso:SimulationCellVector ;
+    cmso:hasComponent_x "0.0"^^xsd:float ;
+    cmso:hasComponent_y "0.0"^^xsd:float ;
+    cmso:hasComponent_z "8.61"^^xsd:float .
+
+<sample:9eb0e3d2-9b50-4ee3-970b-6ec2018e8a1c_Species> a cmso:AtomAttribute ;
+    cmso:hasIdentifier "a6cca4e5-3f7a-4ac7-bcdb-a3bf3c3d4406"^^xsd:string ;
+    cmso:hasName "Species"^^xsd:string ;
+    cmso:hasPath "rdf_structure_store/9eb0e3d2-9b50-4ee3-970b-6ec2018e8a1c.json"^^xsd:string .
+
+<sample:9eb0e3d2-9b50-4ee3-970b-6ec2018e8a1c_UnitCell> a cmso:UnitCell ;
+    cmso:hasAngle <sample:9eb0e3d2-9b50-4ee3-970b-6ec2018e8a1c_LatticeAngle> ;
+    cmso:hasBravaisLattice <sample:9eb0e3d2-9b50-4ee3-970b-6ec2018e8a1c_BravaisLattice> ;
+    cmso:hasLength_x "2.87"^^xsd:float ;
+    cmso:hasLength_y "2.87"^^xsd:float ;
+    cmso:hasLength_z "2.87"^^xsd:float .
+
+<sample:9eb0e3d2-9b50-4ee3-970b-6ec2018e8a1c_Volume> a ns2:Volume ;
+    rdfs:label "SimulationCellVolume" ;
+    ns2:hasUnit <http://qudt.org/vocab/unit/ANGSTROM3> ;
+    ns2:hasValue "638.28"^^xsd:float .
+
+<sample:e6764484-9b08-4c41-91ed-34395206ea57_BravaisLattice> a <https://www.wikidata.org/wiki/Q851536> .
+
+<sample:e6764484-9b08-4c41-91ed-34395206ea57_ChemicalSpecies> a cmso:ChemicalSpecies ;
+    cmso:hasElement <https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:18248> .
+
+<sample:e6764484-9b08-4c41-91ed-34395206ea57_CrystalStructure> a cmso:CrystalStructure ;
+    cmso:hasSpaceGroupNumber 229 ;
+    cmso:hasSpaceGroupSymbol "Im-3m"^^xsd:string ;
+    cmso:hasUnitCell <sample:e6764484-9b08-4c41-91ed-34395206ea57_UnitCell> .
+
+<sample:e6764484-9b08-4c41-91ed-34395206ea57_LatticeAngle> a cmso:LatticeAngle ;
+    cmso:hasAngle_alpha "90.0"^^xsd:float ;
+    cmso:hasAngle_beta "90.0"^^xsd:float ;
+    cmso:hasAngle_gamma "90.0"^^xsd:float .
+
+<sample:e6764484-9b08-4c41-91ed-34395206ea57_Material> a cmso:CrystallineMaterial ;
+    ns3:hasCrystallographicDefect <sample:e6764484-9b08-4c41-91ed-34395206ea57_Vacancy> ;
+    cmso:hasStructure <sample:e6764484-9b08-4c41-91ed-34395206ea57_CrystalStructure> .
+
+<sample:e6764484-9b08-4c41-91ed-34395206ea57_Position> a cmso:AtomAttribute ;
+    cmso:hasIdentifier "a50af896-deee-4a8f-9d44-c404e0f68564"^^xsd:string ;
+    cmso:hasName "Position"^^xsd:string ;
+    cmso:hasPath "rdf_structure_store/e6764484-9b08-4c41-91ed-34395206ea57.json"^^xsd:string .
+
+<sample:e6764484-9b08-4c41-91ed-34395206ea57_SimulationCell> a cmso:SimulationCell ;
+    cmso:hasAngle <sample:e6764484-9b08-4c41-91ed-34395206ea57_SimulationCellAngle> ;
+    cmso:hasLength <sample:e6764484-9b08-4c41-91ed-34395206ea57_SimulationCellLength> ;
+    cmso:hasRepetition_x 3 ;
+    cmso:hasRepetition_y 3 ;
+    cmso:hasRepetition_z 3 ;
+    cmso:hasVector <sample:e6764484-9b08-4c41-91ed-34395206ea57_SimulationCellVector_1>,
+        <sample:e6764484-9b08-4c41-91ed-34395206ea57_SimulationCellVector_2>,
+        <sample:e6764484-9b08-4c41-91ed-34395206ea57_SimulationCellVector_3> ;
+    cmso:hasVolume <sample:e6764484-9b08-4c41-91ed-34395206ea57_Volume> .
+
+<sample:e6764484-9b08-4c41-91ed-34395206ea57_SimulationCellAngle> a cmso:SimulationCellAngle ;
+    cmso:hasAngle_alpha "90.0"^^xsd:float ;
+    cmso:hasAngle_beta "90.0"^^xsd:float ;
+    cmso:hasAngle_gamma "90.0"^^xsd:float .
+
+<sample:e6764484-9b08-4c41-91ed-34395206ea57_SimulationCellLength> a cmso:SimulationCellLength ;
+    cmso:hasLength_x "8.61"^^xsd:float ;
+    cmso:hasLength_y "8.61"^^xsd:float ;
+    cmso:hasLength_z "8.61"^^xsd:float .
+
+<sample:e6764484-9b08-4c41-91ed-34395206ea57_SimulationCellVector_1> a cmso:SimulationCellVector ;
+    cmso:hasComponent_x "8.61"^^xsd:float ;
+    cmso:hasComponent_y "0.0"^^xsd:float ;
+    cmso:hasComponent_z "0.0"^^xsd:float .
+
+<sample:e6764484-9b08-4c41-91ed-34395206ea57_SimulationCellVector_2> a cmso:SimulationCellVector ;
+    cmso:hasComponent_x "0.0"^^xsd:float ;
+    cmso:hasComponent_y "8.61"^^xsd:float ;
+    cmso:hasComponent_z "0.0"^^xsd:float .
+
+<sample:e6764484-9b08-4c41-91ed-34395206ea57_SimulationCellVector_3> a cmso:SimulationCellVector ;
+    cmso:hasComponent_x "0.0"^^xsd:float ;
+    cmso:hasComponent_y "0.0"^^xsd:float ;
+    cmso:hasComponent_z "8.61"^^xsd:float .
+
+<sample:e6764484-9b08-4c41-91ed-34395206ea57_Species> a cmso:AtomAttribute ;
+    cmso:hasIdentifier "f3a4ebd8-3fa0-4543-aed4-22cd86cfe90e"^^xsd:string ;
+    cmso:hasName "Species"^^xsd:string ;
+    cmso:hasPath "rdf_structure_store/e6764484-9b08-4c41-91ed-34395206ea57.json"^^xsd:string .
+
+<sample:e6764484-9b08-4c41-91ed-34395206ea57_UnitCell> a cmso:UnitCell ;
+    cmso:hasAngle <sample:e6764484-9b08-4c41-91ed-34395206ea57_LatticeAngle> ;
+    cmso:hasBravaisLattice <sample:e6764484-9b08-4c41-91ed-34395206ea57_BravaisLattice> ;
+    cmso:hasLength_x "2.87"^^xsd:float ;
+    cmso:hasLength_y "2.87"^^xsd:float ;
+    cmso:hasLength_z "2.87"^^xsd:float .
+
+<sample:e6764484-9b08-4c41-91ed-34395206ea57_Vacancy> a ns1:Vacancy .
+
+<sample:e6764484-9b08-4c41-91ed-34395206ea57_Volume> a ns2:Volume ;
+    rdfs:label "SimulationCellVolume" ;
+    ns2:hasUnit <http://qudt.org/vocab/unit/ANGSTROM3> ;
+    ns2:hasValue "638.28"^^xsd:float .
+
+<substituteatom:8285dc30-cf10-4e02-a01c-253a797fd2a3> a ns2:SubstituteAtom .
+
+<https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:18248> a cmso:ChemicalElement ;
+    cmso:hasChemicalSymbol "Fe"^^xsd:string ;
+    cmso:hasElementRatio "0.9629629629629629"^^xsd:float,
+        "1.0"^^xsd:float .
+
