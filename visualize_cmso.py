@@ -76,12 +76,12 @@ for dp in data_props:
 d1 = graphviz.Digraph('class_hierarchy', format='png', engine='dot')
 d1.attr(rankdir='LR',
         label='CMSO Suite — Class Hierarchy (color = ontology, arrows = rdfs:subClassOf)',
-        fontsize='16', labelloc='t', fontname='Helvetica-Bold',
-        bgcolor='white', nodesep='0.15', ranksep='1.0',
-        dpi='150', size='20,24')
+        fontsize='22', labelloc='t', fontname='Helvetica-Bold',
+        bgcolor='white', nodesep='0.25', ranksep='1.2',
+        dpi='300', size='24,28')
 d1.attr('node', shape='box', style='filled,rounded', fontname='Helvetica',
-        fontsize='10', margin='0.10,0.05', height='0.25')
-d1.attr('edge', arrowhead='empty', color='#666666', penwidth='1.0')
+        fontsize='13', margin='0.15,0.08', height='0.3')
+d1.attr('edge', arrowhead='empty', color='#666666', penwidth='1.2')
 
 module_classes = {}
 for c in all_classes:
@@ -106,7 +106,7 @@ for mod in MODULE_ORDER:
                 style='rounded,filled',
                 color=BORDER.get(mod, '#AAA'),
                 fillcolor=FILL.get(mod, '#F8F8F8') + '30',
-                fontname='Helvetica-Bold', fontsize='12',
+                fontname='Helvetica-Bold', fontsize='15',
                 fontcolor=BORDER.get(mod, '#AAA'))
         for c in sorted(classes, key=lambda x: short(x)):
             sg.node(nid(c), label=short(c),
@@ -119,10 +119,10 @@ for c in all_classes:
             d1.edge(nid(c), nid(p))
 
 with d1.subgraph(name='cluster_legend') as leg:
-    leg.attr(label='Ontologies', style='dashed', color='gray', fontsize='12')
+    leg.attr(label='Ontologies', style='dashed', color='gray', fontsize='14')
     for m in MODULE_ORDER:
         leg.node(f'leg_{m}', label=m.upper(), fillcolor=FILL[m], shape='box',
-                 style='filled,rounded', fontsize='9',
+                 style='filled,rounded', fontsize='12',
                  color=BORDER[m])
 
 d1.render('cmso_class_hierarchy', cleanup=True)
@@ -137,9 +137,9 @@ print('    cmso_class_hierarchy.pdf')
 # ============================================================
 d2 = graphviz.Digraph('property_map', format='png')
 d2.attr(rankdir='LR', label='CMSO Suite — Object Properties (Domain → Range)',
-        fontsize='18', labelloc='t', fontname='Helvetica-Bold', bgcolor='white',
-        nodesep='0.3', ranksep='1.0', dpi='150', size='20,16')
-d2.attr('node', shape='box', style='filled,rounded', fontname='Helvetica', fontsize='10')
+        fontsize='22', labelloc='t', fontname='Helvetica-Bold', bgcolor='white',
+        nodesep='0.4', ranksep='1.2', dpi='300', size='24,20')
+d2.attr('node', shape='box', style='filled,rounded', fontname='Helvetica', fontsize='13')
 
 added = set()
 for prop in obj_props:
@@ -158,7 +158,7 @@ for prop in obj_props:
                         color=BORDER.get(mod, '#BDC3C7'), penwidth='2')
                 added.add(nid(r))
             mp = get_module(prop)
-            d2.edge(nid(d), nid(r), label=short(prop), fontsize='9',
+            d2.edge(nid(d), nid(r), label=short(prop), fontsize='11',
                     color=BORDER.get(mp, '#888'), fontcolor=BORDER.get(mp, '#888'))
 
 d2.render('cmso_property_map', cleanup=True)
@@ -168,10 +168,10 @@ print('2/7 cmso_property_map.png')
 # FIGURE 3: Full OntoGraf-style (record nodes with datatype props)
 # ============================================================
 d3 = graphviz.Digraph('ontograf', format='png')
-d3.attr(rankdir='LR', label='CMSO Suite — Full Ontology Graph', fontsize='20',
+d3.attr(rankdir='LR', label='CMSO Suite — Full Ontology Graph', fontsize='24',
         labelloc='t', fontname='Helvetica-Bold', bgcolor='white',
-        nodesep='0.4', ranksep='1.2', size='28,20', dpi='150')
-d3.attr('node', shape='record', style='filled', fontname='Helvetica', fontsize='10')
+        nodesep='0.5', ranksep='1.4', size='32,24', dpi='300')
+d3.attr('node', shape='record', style='filled', fontname='Helvetica', fontsize='12')
 
 for c in all_classes:
     mod = get_module(c)
@@ -196,7 +196,7 @@ for prop in obj_props:
     for d in domains:
         for r in ranges:
             mp = get_module(prop)
-            d3.edge(nid(d), nid(r), label=short(prop), fontsize='8',
+            d3.edge(nid(d), nid(r), label=short(prop), fontsize='10',
                     color=BORDER.get(mp, '#888'), fontcolor=BORDER.get(mp, '#888'),
                     style='dashed', arrowhead='vee')
 
@@ -212,10 +212,10 @@ for mod_name in MODULE_ORDER:
     mg.parse(f'{mod_name}/{owl_files[0]}')
 
     dot = graphviz.Digraph(f'module_{mod_name}', format='png')
-    dot.attr(rankdir='TB', label=f'OCDO Module: {mod_name.upper()}', fontsize='16',
+    dot.attr(rankdir='TB', label=f'OCDO Module: {mod_name.upper()}', fontsize='20',
              labelloc='t', fontname='Helvetica-Bold', bgcolor='white',
-             dpi='150', nodesep='0.4', ranksep='0.7')
-    dot.attr('node', shape='record', style='filled', fontname='Helvetica', fontsize='10',
+             dpi='300', nodesep='0.5', ranksep='0.9')
+    dot.attr('node', shape='record', style='filled', fontname='Helvetica', fontsize='13',
              fillcolor=FILL.get(mod_name, '#F2F3F4'),
              color=BORDER.get(mod_name, '#BDC3C7'), penwidth='2')
 
@@ -270,7 +270,7 @@ for mod_name in MODULE_ORDER:
                              fillcolor=FILL.get(ext_mod, '#EAECEE'),
                              color=BORDER.get(ext_mod, '#85929E'))
                     ext_added.add(nid(r))
-                dot.edge(nid(d), nid(r), label=short(prop), fontsize='8', style='dashed',
+                dot.edge(nid(d), nid(r), label=short(prop), fontsize='10', style='dashed',
                          color=BORDER.get(mod_name, '#888'),
                          fontcolor=BORDER.get(mod_name, '#888'))
 
