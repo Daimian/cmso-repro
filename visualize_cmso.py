@@ -3,7 +3,7 @@ from rdflib.namespace import RDF, RDFS, OWL
 import graphviz
 import os
 
-os.chdir('/Users/mian/workplace/cmso-repro')
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 g = rdflib.Graph()
 for name in ['cmso', 'asmo', 'pldo', 'podo', 'ldo']:
